@@ -1,11 +1,11 @@
-from langchain.memory import ConversationBufferMemory, ConversationSummaryMemory
+from langchain.memory import ConversationBufferWindowMemory, ConversationSummaryBufferMemory
 from langchain.chains import ConversationChain
 
 class GameMemory():
 
     def __init__(self, llm):
-        self.short_term =  ConversationBufferMemory(k=5)
-        self.long_term = ConversationSummaryMemory(llm=llm)
+        self.short_term =  ConversationBufferWindowMemory(k=5)
+        self.long_term = ConversationSummaryBufferMemory(llm=llm, max_token_limit=40)
 
     def save_context(self, inputs, outputs):
         """Save to both memories."""
