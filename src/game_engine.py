@@ -1,10 +1,7 @@
 '''The main game engine (control and model) for old-time text adventure game.'''
 
-from openai import OpenAI
-
-import os
-
 from .game_memory import GameMemory
+from .llms.o4mini_LLM import O4miniLLM
 from context import CONTEXT as game_context
 from synopsis import SYNOPSIS as game_synopsis
 
@@ -20,11 +17,8 @@ class Game():
         # model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype=torch.float16)
         # self._llm_pipeline = pipeline("text-generation", model=model, tokenizer=tokenizer)
         # self._llm = HuggingFacePipeline(pipeline=self._llm_pipeline)
-        self._model = "gpt-4o-mini"
-        OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-        if OPENAI_API_KEY is None:
-            raise ValueError("Please set your OpenAI API key as an environment variable.")
-        self._client = OpenAI()
+        
+        self._client = O4miniLLM()
         
         # Save reference to memory
         self._game_memory = GameMemory()
@@ -49,8 +43,7 @@ The context of the game is:\n {self._context}\n
 The suggested synopsis, or what should happen during the game is:\n {self._synopsis}\n
 '''
 
-        output = self._client.chat.completions.create(
-            model=self._model,
+        initial_scene = self._client.chat_completions_create(
             messages=[
                 {"role": "system", "content": initial_prompt },
                 {"role": "assistant", "content":
@@ -68,7 +61,6 @@ Now describe the first scene in the game, as the player would see it, and then t
             ]
         )
 
-        initial_scene = output.choices[0].message.content
         self._game_memory.add_turn_to_memory("", initial_scene)
         return initial_scene
 
@@ -79,8 +71,7 @@ Now describe the first scene in the game, as the player would see it, and then t
             return
 
         # Get the game's response using the LLM
-        response = self._client.chat.completions.create(
-            model=self._model,
+        output = self._client.chat_completions_create(
             messages=[
                 {
                     "role": "assistant",
@@ -96,16 +87,15 @@ Now describe the first scene in the game, as the player would see it, and then t
                 },
             ]
         )
-        output = response.choices[0].message.content
+
         self._game_memory.add_turn_to_memory(player_input, output)
         return output
 
-    def _end_game_report(self) -> str:
+    def end_game_report(self) -> str:
         """End the game and summarize what happened."""
         response = ""
         response += ("\n==== GAME OVER ====\n")
-        assessment = self._client.chat.completions.create(
-            model=self._model,
+        assessment = self._client.chat_completions_create(
             messages=[
                 {
                     "role": "assistant",
@@ -115,7 +105,7 @@ Now describe the first scene in the game, as the player would see it, and then t
                 }
             ]
         )
-        response += assessment.choices[0].message.content + "\n"
+        response += assessment + "\n"
         response += "\nThank you for playing!"
         return response
 
@@ -132,4 +122,4 @@ if __name__ == "__main__":
             break
         game_output = game.play_turn(player_action)
         print(game_output)
-    print(game._end_game_report())
+    print(game.end_game_report())

@@ -13,4 +13,4 @@ if __name__ == "__main__":
             break
         game_output = game.play_turn(player_action)
         print(game_output)
-    print(game._end_game_report())
+    print(game.end_game_report())
