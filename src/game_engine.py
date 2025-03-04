@@ -4,7 +4,7 @@ from openai import OpenAI
 
 import os
 
-from src.game_memory import GameMemory
+from .game_memory import GameMemory
 from context import CONTEXT as game_context
 from synopsis import SYNOPSIS as game_synopsis
 
@@ -103,13 +103,14 @@ Now describe the first scene in the game, as the player would see it, and then t
     def _end_game_report(self) -> str:
         """End the game and summarize what happened."""
         response = ""
-        response += ("\n==== GAME OVER ====")
+        response += ("\n==== GAME OVER ====\n")
         assessment = self._client.chat.completions.create(
             model=self._model,
             messages=[
                 {
-                    "role": "system",
-                    "content": "You summarize the game and assess the player's performance. Last 10 turns in the game were:\
+                    "role": "assistant",
+                    "content": "You summarize the game and assess the player's performance in the text adventure\
+                    . Last 10 turns in the game were:\
                         \n" + self._game_memory.get_memory()
                 }
             ]
