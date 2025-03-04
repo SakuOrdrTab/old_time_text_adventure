@@ -1,37 +1,17 @@
 '''The main game engine (control and model) for old-time text adventure game.'''
 
-# import torch
-# from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
-# from langchain_huggingface import HuggingFacePipeline
-# from langchain.chains import ConversationChain
 from openai import OpenAI
 
-from collections import deque
 import os
 
+from src.game_memory import GameMemory
 from context import CONTEXT as game_context
 from synopsis import SYNOPSIS as game_synopsis
-# import game_memory
 
-class GameMemory():
-
-    def __init__(self) -> None:
-        self._memory = deque(maxlen=10)
-
-    def add_turn_to_memory(self, player_input: str, game_response: str) -> None:
-        """Add the player's input and game response to the game memory."""
-        self._memory.append((player_input, game_response))
-
-    def get_memory(self) -> str:
-        """Get the game memory as a string."""
-        memory_str = ""
-        for turn in self._memory:
-            memory_str += f"Text Adventure Game: {turn[1]}\nPlayer: {turn[0]}\n\n"
-        return memory_str
 
 class Game():
 
-    def __init__(self, memory, model_name: str = "meta-llama/Llama-3.2-3B-Instruct") -> None:
+    def __init__(self, model_name: str = "meta-llama/Llama-3.2-3B-Instruct") -> None:
         """Initialize the game with LLM, memory, and game context."""
         
         # Load LLM
@@ -47,8 +27,7 @@ class Game():
         self._client = OpenAI()
         
         # Save reference to memory
-        self._game_memory = memory
-
+        self._game_memory = GameMemory()
         # Store game synopsis and context
         self._synopsis = game_synopsis
         self._context = game_context
@@ -70,7 +49,7 @@ The context of the game is:\n {self._context}\n
 The suggested synopsis, or what should happen during the game is:\n {self._synopsis}\n
 '''
 
-        initial_scene = self._client.chat.completions.create(
+        output = self._client.chat.completions.create(
             model=self._model,
             messages=[
                 {"role": "system", "content": initial_prompt },
@@ -89,8 +68,9 @@ Now describe the first scene in the game, as the player would see it, and then t
             ]
         )
 
-        # print(initial_scene)
-        return initial_scene.choices[0].message.content
+        initial_scene = output.choices[0].message.content
+        self._game_memory.add_turn_to_memory("", initial_scene)
+        return initial_scene
 
     def play_turn(self, player_input: str) -> str:
         """Processes player's input and generates the next game response."""
@@ -116,7 +96,9 @@ Now describe the first scene in the game, as the player would see it, and then t
                 },
             ]
         )
-        return response.choices[0].message.content
+        output = response.choices[0].message.content
+        self._game_memory.add_turn_to_memory(player_input, output)
+        return output
 
     def _end_game_report(self) -> str:
         """End the game and summarize what happened."""
@@ -137,23 +119,16 @@ Now describe the first scene in the game, as the player would see it, and then t
         return response
 
 if __name__ == "__main__":
-    game_memory = GameMemory()
-    game = Game(memory=game_memory)
+    game = Game()
     
     initial_setting = game.start_game()
     print(initial_setting)
-    game_memory.add_turn_to_memory("", initial_setting)
 
     # Simple game loop
     while True:
-        player_action = input("\nWhat do you do? ")
+        player_action = input("\n: ")
         if player_action.lower() in ["quit", "exit"]:
-            game._end_game_report()
             break
         game_output = game.play_turn(player_action)
-        game_memory.add_turn_to_memory(player_action, game_output)
         print(game_output)
     print(game._end_game_report())
-
-
-
