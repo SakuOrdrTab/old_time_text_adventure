@@ -42,7 +42,7 @@ class O4miniAgent():
             ),
         )
         custom_prefix = (
-                    "You are the orchestrator of a text adventure. You have two tools:\n"
+                    "You are the orchestrator of a text adventure game. You have two tools:\n"
                     "1) TextGenerator => returns the next scene text.\n"
                     "2) StatusAssessor => returns either 'Scene OK' or suggestions for improvement.\n\n"
                     "Your final answer to the user MUST be the final scene text.\n"
