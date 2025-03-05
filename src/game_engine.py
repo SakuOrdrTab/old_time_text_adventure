@@ -2,9 +2,7 @@
 
 from .game_memory import GameMemory
 from .llms.o4mini_LLM import O4miniLLM
-from context import CONTEXT as game_context
-from synopsis import SYNOPSIS as game_synopsis
-
+from src.adventures.kalevala import CONTEXT as game_context, SYNOPSIS as game_synopsis
 
 class Game():
 

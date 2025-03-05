@@ -144,8 +144,8 @@ Otherwise, point out any issues or suggestions for improvement.
 # For testing
 if __name__ == "__main__":
     print("Welcome to the multi-tool text adventure demonstration!")
-    from context import CONTEXT as context
-    from synopsis import SYNOPSIS as synopsis
+    from src.adventures.kalevala import CONTEXT as context
+    from src.adventures.kalevala import SYNOPSIS as synopsis
 
     from src.game_memory import GameMemory
     game_memory = GameMemory()
