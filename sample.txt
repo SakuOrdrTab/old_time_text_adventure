@@ -1,0 +1,152 @@
+The game begins...
+
+The sun hangs low in the sky, casting a warm golden hue across the peaceful town of Hoshikawa. The sound of chirping birds fills the air, a melodious reminder of spring, while gentle breezes carry the soft fragrance of blooming cherry blossoms. The town lies nestled amidst rolling green hills, with the great river meandering through, its waters glistening under the fading sunlight.
+
+You stand at the threshold of your childhood home. The wooden structure, though slightly weathered, is still adorned with intricate carvings typical of the period. Memories flood back to you—the laughter, the warmth of family, the simple joys of your youth. After years of rigorous training under a master swordsman, you’ve returned as a young samurai, adorned in your formal attire, a symbol of your status, yet your heart feels heavy with unspoken emotions.
+
+As you step inside, you hear whispers of nature through open windows and witness the delicate dance of cherry blossom petals wafting through the air. The familiar scent of tatami mats and incense draws you deeper into the home.
+
+Yet, you cannot shake the shadows of duty that now loom over you. The town is alive with murmurs of Lady Akiko’s impending marriage to a nobleman—one who she has never met. A union designed to strengthen the daimyō’s family, but at the cost of her own happiness, and perhaps yours too.
+
+Looking out of the window, you catch a glimpse of the towering daimyō’s castle, its banners fluttering in the wind, a constant reminder of the rigid societal expectations that govern love and duty in this era. Nearby, you spot a known figure, Old Midori, the matchmaker and fortune teller, with her sharp eyes glinting in the afternoon light, and you ponder whether her cryptic wisdom could shed light on the tangled paths ahead.
+
+Your choice looms large before you—a future intertwined with honor and longing yet brimming with uncharted possibilities.
+
+What will you do?
+
+: I go to old midori and ask about the town current affairs. Could she know something I don't know? Also, can she tell my fate?
+You step outside, the warm sunlight enveloping you as you make your way towards Old Midori, who sits beneath a sprawling cherry blossom tree, her gnarled fingers deftly weaving strands of colored thread. The tree, adorned with delicate pink blooms, sways gently in the breeze, casting ephemeral shadows on the ground.
+
+“Ah, young samurai,” she greets you, her voice a raspy yet comforting melody. Her sharp eyes peer at you, as if seeing into the depths of your heart. “You seek truths hidden within the whispers of the wind and the threads of fate. Sit with me.”
+
+You take a seat on the grass at her feet, the fragrance of cherry blossoms enveloping you. “I wish to know about the current affairs of Hoshikawa and my fate,” you say, voice steady despite the tumult of emotions swirling within you.
+
+Old Midori chuckles softly, a knowing smile playing on her lips. “The town is woven with tales of love and longing, and you are at the center of one such tale. Lady Akiko’s betrothal is but a part of the larger tapestry—there are those who wish to see her free, and then there are those bound by tradition, like the daimyō. Change is in the air, young one, but it often comes at a cost.”
+
+She leans closer, her voice dropping to a conspiratorial whisper. “As for your fate, it is still unwritten, shaped by your choices. I see paths diverging like the branches of this tree. Honor, love, and sacrifice dance around you, but tread carefully—each decision may alter your destiny forever. Will you pursue your feelings for Lady Akiko, or choose another path? The heart knows what it wants, but the world is seldom kind to those who follow it.”
+
+Her gaze sharpens as she raises her hands, threading them through the air as if to pluck your future from unseen strands. “Seek the truth, young samurai. It shall guide you. But remember, the heart's desires can lead to joy—or suffering.”
+
+As her words settle in your heart, you feel a mix of hope and trepidation. In this moment, you realize that the choices ahead may hold the power to rewrite your fate and that of those entwined with yours.
+
+What will you do next?
+
+: Old Midori is a wise old woman, so I could ask her advise politely: "Honorable Midori, you must know much about the ways of hearts as you have stepped on dusty Nippon longer than I have. If I want to find out where my heart really leads me, how should I proceed. To what direction should my feet go?"
+Text Adventure Game: Old Midori straightens, her gnarled fingers pausing in their weaving. A glimmer of intrigue dances in her eyes as she regards you with a mixture of admiration and seriousness. “Ah, young samurai,” she replies, her voice transitioning to a softer tone, “the heart is a curious thing, indeed. It is a compass that points toward desire, yet often hides behind the veil of duty and tradition.”
+
+She gestures toward the sprawling cherry blossom tree above you, its branches heavy with blooms swaying like the pendulum of fate. “To seek where your heart leads, you must first understand its true nature. But know this—the path may be strewn with challenges, and every step taken must honor not only your feelings but the lives entwined with yours. Each choice carries weight.”
+
+Old Midori leans closer, her voice a conspiratorial whisper as if sharing a secret only the winds can carry. “You may choose to pursue your feelings for Lady Akiko. To do so, first, you must gather the courage to confront her—perhaps during the spring festival when emotions run high, and the air is filled with the fragrance of blossoms. Yet, beware of the consequences that may follow, for the daimyō’s will is not easily swayed.”
+
+Pausing for a moment, she then continues, “Alternatively, there is the wandering poet, Yukio. A kind soul who knows the heart’s whispers. He may provide you with insights that can illuminate your path. Or perhaps seek out Masaru; he is an honorable rival, yet he too bears the burdens of unspoken love. Engaging with him could offer unexpected revelations.”
+
+Old Midori places her hands on your shoulders, her grip surprisingly firm despite her fragile appearance. “Wherever your feet take you, remember, young samurai, that each step on this journey is a dance between love and honor. Will you embrace this uncertainty, or shall you retreat into the safety of unseeing eyes?”
+
+Her words linger in the air, wrapping around your heart like the petals falling from above, filling you with both trepidation and determination. You realize the delicate balance of your choices will inevitably shape not only your future but also the paths of those you hold dear.
+
+What will you do next?
+
+: Her words are wise. I must be humble, but also not to allow other's to shape my yarn of fate. Tomorrow, at noon after I have prepared myself to my best appearance, I travel to the castle and see if I can get an audience with Akiko.
+Text Adventure Game: Old Midori’s eyes twinkle with a mixture of respect and approval as she listens to your words. “Ah, a noble heart indeed! To seek your own path while carrying the weight of honor upon your shoulders speaks volumes of your spirit,” she replies, her gnarled hands smoothing the threads of her weaving as if binding your intentions into the tapestry of fate.
+
+The sun dips low in the sky, casting long shadows that intertwine with the petals on the ground. “Remember, young samurai, it is one thing to seize an opportunity, and another to navigate the currents that follow. The daimyō’s castle is both a fortress and a cage—fragile are the hearts that dwell within its walls,” she cautions, her voice heavy with foreboding.
+
+As you prepare to leave, she adds with a hint of mystery, “Tomorrow at noon, you shall make your move. Wear your finest attire, let the blossoms of your youth show, and may the spirit of courage guide you. But heed my words—a path taken with clear intentions may still lead to unexpected trials.”
+
+With your resolve fortified, you bid Old Midori farewell, her gentle nod a reassuring gesture. You make your way back to your childhood home, feeling the energy of the town shift around you. The distant sounds of laughter and celebration remind you of the spring festival, where hopes and desires often intertwine amidst the blooming trees.
+
+As you arrive home, the familiar warmth envelops you, yet your thoughts are already spiraling towards tomorrow’s pivotal meeting. You thoughtfully prepare your attire—choosing a formal kimono adorned with subtle patterns of cherry blossoms, a garment that reflects both your status as a samurai and your connection to the fleeting beauty of love.
+
+Night falls, wrapping Hoshikawa in a calm embrace. You lay in your bed, your mind dancing between dreams of confrontation and cherished memories of Akiko. What will you say to her? What if the daimyō is present during your meeting? The uncertainty stirs excitement and trepidation in your heart.
+
+Finally, fatigue washes over you, leading you into a deep slumber filled with cherry blossoms swirling through the air and echoes of laughter fading into the distance.
+
+The dawn breaks, soft beams of sunlight waking you gently. Today is the day that holds the potential to alter everything.
+
+What will you do next?
+
+: I put my best, yet modest honouring outfit on and head towards the castle. I realize that trying to get an audience directly with Akiko would be a blunt and disrespectful move, so I should probably ask Daimio for permission to ask audience with Akiko. Alas, I am not suitable as a samurai to ask audience with the Daimio, neither, so when I get to the castle, I will ask for Daimio's councillor.
+Text Adventure Game: 
+
+With quiet determination, you adorn yourself in your best yet modest outfit, carefully selecting layers that blend elegance with humility. The fabric flows gracefully as you move, adorned with soft patterns reminiscent of cherry blossoms, a symbol of fleeting beauty. You catch a glimpse of yourself in the mirror, your reflections echoing the purpose in your heart.
+
+Stepping outside, the morning air is crisp, imbued with the rich scent of dew-kissed earth and blossoms. The town comes alive around you, villagers tending to their daily tasks, laughter mingling with the sounds of nature. You feel a swelling mix of nerves and courage as you make your way towards the towering walls of the daimyō's castle.
+
+As you approach the majestic structure, its high stone walls loom before you, painted with the weight of duty and tradition. The banners flutter in the gentle breeze, their vivid colors a stark contrast against the grey stone, each emblematic of power and prestige. Your heart races with the understanding that stepping into this realm is a daunting task.
+
+Upon reaching the entrance, you notice a few guards in traditional armor, their keen eyes assessing everyone who passes through. You take a deep breath and approach them, bowing your head respectfully, embodying the honor of a samurai even if you feel somewhat low in status.
+
+“Honorable guards,” you begin, your voice steady, “I request an audience with the daimyō’s councilor, for I seek to understand the nature of Lady Akiko’s engagement. I approach this matter with the utmost respect and humility.”
+
+The guards exchange glances, their expressions revealing a mixture of curiosity and skepticism. One of them, a slight frown marring his features, replies, “You may have your heart in the right place, but the councilor is busy with matters of great importance. Such requests are reserved for higher-ranking samurai or those with direct ties to the daimyō’s estate. Do you have any letters of introduction or endorsements?”
+
+You are struck with a moment of uncertainty, realizing the delicate chain of protocol and honor that binds the world around you. Nevertheless, you stand firm. Perhaps there is a way to gain their favor, or to speak to someone who can help.
+
+What will you do next?
+
+: I will respond with a honouring bow: "I realize perfectly that the councilor is very occupied with important matters and unfortunately I don't have letters of recommendation or similar at my disposal. I am a mere but honourable samurai and all the inscriptions on this matter are carved to my heart alone. But, maybe this coul
+d offer also a solution. If I could prove my worth by proving my value to the councilor, maybe he could in his radiant wisdom deem my worthiness for asking the daimio for an audience with lady Akiko?"
+Text Adventure Game: 
+
+The guard's brow furrows as he contemplates your earnest response. Your words, laced with respect and determination, resonate in the still air between you. A flicker of surprise crosses the guard's face as he recognizes the sincerity in your voice and the honor behind your request.
+
+After a moment of silence, the guard speaks again, “You have spirit, I will give you that.” He weighs your words carefully, his stance softening slightly. “Very well, young samurai. If you wish to prove your worth, the councilor does have tasks that require a steady hand. Should you succeed in his eyes, it may well pave the way for your audience with the daimyo and Lady Akiko.”
+
+He gestures toward the vast entrance behind him, where marble steps lead into the grand hall of the castle. “Enter and speak to the secretary within; they will relay your intent to the councilor. Do not squander this opportunity—show your resolve.”
+
+With a deep breath, your heart steadying with a newfound purpose, you bow again in gratitude. The guard nods, allowing you to pass beyond the threshold into the castle’s interior.
+
+As you step into the grand hall, the air is thick with the scent of polished wood and the faint fragrance of incense. Paintings of great battles and serene landscapes adorn the walls, reflecting the beauty and complexity of your homeland. The soft rustle of silk and whispers of conversation create a backdrop of hushed anticipation.
+
+Before you lies the secretary's desk, a figure draped in fine robes, surrounded by scrolls and papers. The secretary looks up, eyes assessing you with a mixture of curiosity and expectation.
+
+“State your business, samurai,” the secretary commands, their voice crisp and authoritative, echoing off the high ceilings.
+
+You straighten your posture and steady your gaze.
+
+What will you do next?
+
+: I bow respectfully and say:"Reverend secretary of the councilor. I am a humble samurai, yet fortunate enough not to be forced to shame my conduct of samurai code. I am as honoured and fortunate to be able to present my matter to You, as I am sorry for taking time from more important matters to you. I seek audience to Lady Keiko, but I am obliged by my honour to ask for Daimyo's permission to ask for an audience. Thus, I would like to prove my worth to the councillor, so he could in his shining wisdom and benevolence ask Daimio for this in my behalf. I would rather die in attempt to prove my worth than dissatisfy the parties in this matter as I am
+ still doubting my value to face Lady Akiko as I am."
+Text Adventure Game: 
+
+The secretary watches you with a discerning gaze, their expression flickering between surprise and intrigue as you articulate your intentions with such earnestness and humility. The grand hall, adorned with elegance, seems to echo the sincerity of your words, creating a palpable tension in the air.
+
+“Your spirit is commendable, young samurai,” the secretary replies, a note of respect entering their voice. “However, proving your worth is no small task. If the councilor is indeed to consider your request, you must demonstrate not only your dedication to honor but also the skills befitting of a samurai of any standing.”     
+
+They pause, allowing your determination to settle in. “Very well, should you wish to proceed, there is a task at hand. The councilor is currently seeking someone to assist in managing the logistics for the upcoming spring festival. There are preparations for a ceremonial dance that must be organized, and distractions leading to disarray could cause significant embarrassment to the daimyō. If you can contribute to the smooth running of this event, it may sway the councilor’s opinion in your favor.”
+
+With a gesture, the secretary points toward a large door to the side, adorned with symbols signifying authority, where the councilor will likely be found. “Present yourself to the councilor, and state your willingness to assist. But take heed, this endeavor requires not only action but diplomacy and tact. The nobility will not be forgiving of missteps.”
+
+As you look toward the door, your heart beats with excitement and anxiety. The opportunity to step into the inner workings of the castle and prove your worth inspires you deeply, knowing it could lead to your desired audience with Lady Akiko.
+
+What will you do next?
+
+: I will proceed to the councilor and there I will bow until he wishes me to open my mouth.
+Text Adventure Game: 
+
+With resolute determination, you move toward the ornate door that leads to the councilor’s chambers. Each step feels heavy with purpose as you draw closer to the threshold, your heart beating steadily in anticipation. The door is crafted from dark wood, polished to a sheen, and intricately carved with symbols signifying authority and wisdom.
+
+You gently push the door open, and a quiet yet commanding presence fills the chamber. Inside, the councilor sits at a large, elegantly adorned wooden desk, his brow furrowed in concentration over scrolls and reports that detail the tasks at hand. The lighting casts a warm glow inside, illuminating the dust motes floating gently through the air.
+
+Upon entering, you take a deep breath and step forward, bowing deeply, your forehead nearly touching the cool floor—a gesture of absolute respect and honor towards the councilor's station. The silence in the room seems to stretch as you hold your position, waiting for the councilor to acknowledge your presence.
+
+After a moment that feels like an eternity, the councilor raises his head, his sharp eyes sizing you up with a keen acumen. “Rise, young samurai,” he commands, his voice steady and authoritative. “Speak your intentions. Why do you bow before me in such earnestness?”
+
+You straighten slowly, feeling the weight of the moment pressing upon you. The councilor’s gaze remains fixed on you, measuring your worthiness and resolve.
+
+What will you do next?
+
+: I say: "Honorable councilman-san! I am not yet ready to disclose fully my intentions as I want to prove my worthiness for asking You for anything before that. Let me just assure You, that there is nothing malicious, notorious or dishonorable in my intentions. Can I prove my worthiness by proving myself useful to You in any w
+ay?"
+Text Adventure Game:
+
+The councilor studies you with an expression that reveals both scrutiny and curiosity. The air in the chamber feels charged, infused with the unspoken tension of your request. He leans back slightly in his chair, fingers steepling as he contemplates your words, weighing your integrity against the backdrop of the samurai code. 
+
+“You speak of proving worthiness,” the councilor replies, his voice calm yet firm. “In this castle, actions speak louder than words. If you wish to assist me, there is indeed a task that requires the hands of someone dedicated and honorable.”
+
+He gestures to a large scroll unfurled on his desk, its contents filled with notes and plans for the upcoming spring festival. “The preparations for the ceremonial dance must begin promptly, and it is essential that everything proceeds without a hitch. We face potential hurdles with the entertainers and the arrangements of the dance ground. Many considerations are at hand—timing, the placement of flowers, and the coordination between performers.”
+
+“Should you succeed in executing this task with precision, I may consider allowing you an audience with the daimyo concerning Lady Akiko.” He looks directly into your eyes, measuring the conviction in your gaze. “Can you handle these responsibilities, knowing that the success or failure of the festival rests on your shoulders?”
+
+The weight of his challenge hangs in the air, and you can feel your heart racing at the prospect laid before you. A chance to prove yourself, a chance to gain an audience that could change your fate. The entire future of your heartfelt intentions is now intertwined with the upcoming festival.
