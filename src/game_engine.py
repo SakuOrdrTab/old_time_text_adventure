@@ -6,15 +6,11 @@ from src.adventures.kalevala import CONTEXT as game_context, SYNOPSIS as game_sy
 
 class Game():
 
-    def __init__(self, model_name: str = "meta-llama/Llama-3.2-3B-Instruct") -> None:
+    def __init__(self, game_context, game_synopsis) -> None:
         """Initialize the game with LLM, memory, and game context."""
         
         # Load LLM
         print("Loading game model...")
-        # tokenizer = AutoTokenizer.from_pretrained(model_name)
-        # model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype=torch.float16)
-        # self._llm_pipeline = pipeline("text-generation", model=model, tokenizer=tokenizer)
-        # self._llm = HuggingFacePipeline(pipeline=self._llm_pipeline)
         
         self._client = O4miniLLM()
         

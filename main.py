@@ -1,7 +1,8 @@
 from src.game_engine import Game
+from src.adventures.paranoia import CONTEXT as game_context, SYNOPSIS as game_synopsis
 
 if __name__ == "__main__":
-    game = Game()
+    game = Game(game_context=game_context, game_synopsis=game_synopsis)
     
     initial_setting = game.start_game()
     print(initial_setting)
