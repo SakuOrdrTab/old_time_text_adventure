@@ -25,8 +25,8 @@ class Game():
 
         """Start the game by describing the first scene."""
         print("\n==== Welcome to the Adventure Game ====\n")
-        print("Synopsis:\n", self._synopsis)
-        print("\nGame Context:\n", self._context)
+        # print("Synopsis:\n", self._synopsis)
+        # print("\nGame Context:\n", self._context)
         print("\nThe game begins...\n")
 
         initial_prompt = f'''

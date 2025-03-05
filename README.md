@@ -41,3 +41,18 @@ You can also do this in the code, if you prefer; the init of the LLM happens in 
 
 Now just run the main entry point:
 >py main.py
+
+## Adventures
+
+
+Different adventures are in the `adventures` folder in each files as constants. Currently there is:
+- kalevala (finnish iron age traditional adventure)
+- zombie_apocalypse (Traditional zombie survival horror in northern Norway)
+- edo_romance (Late samurai period romance)
+- icu_disaster (A medical RPG)
+
+In the `main.py` check this:
+
+>from src.adventures.edo_romance import CONTEXT as game_context, SYNOPSIS as game_synopsis
+
+replace the `edo_romance`with desired adventure
