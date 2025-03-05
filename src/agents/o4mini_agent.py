@@ -6,7 +6,7 @@ from langchain.chains import LLMChain
 
 class O4miniAgent():
 
-    def __init__(self, context : str, synopsis : str, memory):
+    def __init__(self, context : str, synopsis : str, memory, logger = None):
         
         # Initialize LLM o4 mini
         OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -41,11 +41,22 @@ class O4miniAgent():
                 "suggestions if needed. Input is a string describing the scene."
             ),
         )
-
-        # # We create an LLMChain for text generation.
-        # self.text_gen_chain = LLMChain(llm=self.llm, prompt=self.text_gen_prompt_template)
-
-        # self.assessment_chain = LLMChain(llm=self.llm, prompt=self.assessment_prompt_template)
+        custom_prefix = (
+                    "You are the orchestrator of a text adventure. You have two tools:\n"
+                    "1) TextGenerator => returns the next scene text.\n"
+                    "2) StatusAssessor => returns either 'Scene OK' or suggestions for improvement.\n\n"
+                    "Your final answer to the user MUST be the final scene text.\n"
+                    "Process:\n"
+                    "- Step 1: Call TextGenerator to get the scene.\n"
+                    "- Step 2: Optionally call StatusAssessor to check if the scene is OK or needs improvements.\n"
+                    "- Step 3: If StatusAssessor says 'Scene OK', return the scene from Step 1.\n"
+                    "  If it suggests improvements, revise the scene yourself and return the updated final scene.\n\n"
+                    "DO NOT reveal 'Scene OK' or other meta outputs as the final message.\n"
+                    "Always produce the final scene text that the user sees.\n"
+                    "If StatusAssessor returns suggestions, incorporate them exactly into the scene text. Then produce that improved scene as your final answer.\n"
+                    "Do not call any tool more than three times; if three calls are reached, immediately return the best scene text you have.\n"
+                 #   "Do not provide chain-of-thought. End your final answer with the updated or original scene text.\n"
+                )
 
         # Initialize the agent
         # We use ZERO_SHOT_REACT_DESCRIPTION so that the agent attempts to figure out
@@ -54,7 +65,11 @@ class O4miniAgent():
             tools=[self.text_generation, self.status_assessment],
             llm=self.llm,
             agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
-            verbose=True
+            verbose=True,
+            agent_kwargs={
+                "max_iterations" : 3,
+                "system_message": custom_prefix  
+            }
         )
 
     def text_generation_tool(self, player_action: str) -> str:
