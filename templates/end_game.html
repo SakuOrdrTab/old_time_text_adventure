@@ -2,11 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <title>End Game Report</title>
   </head>
   <body>
-    <h1>End Game Report</h1>
-    <pre>{{ report }}</pre>
-    <p><a href="{{ url_for('new_game') }}">Start a New Game</a></p>
+    <div class="container">
+        <h1>End Game Report</h1>
+        <pre>{{ report }}</pre>
+        <p><a href="{{ url_for('new_game') }}">Start a New Game</a></p>
+    </div>
   </body>
 </html>
