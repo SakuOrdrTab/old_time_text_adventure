@@ -1,5 +1,5 @@
 from src.game_engine import Game
-from src.adventures.edo_romance import CONTEXT as game_context, SYNOPSIS as game_synopsis
+from src.adventures.icu_disaster import CONTEXT as game_context, SYNOPSIS as game_synopsis
 
 if __name__ == "__main__":
     game = Game(game_context=game_context, game_synopsis=game_synopsis)
@@ -14,4 +14,6 @@ if __name__ == "__main__":
             break
         game_output = game.play_turn(player_action)
         print(game_output)
+        if "game over" in game_output.lower():
+            break
     print(game.end_game_report())

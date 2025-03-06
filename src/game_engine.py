@@ -54,6 +54,7 @@ Now describe the first scene in the game, as the player would see it, and then t
                 }
             ]
         )
+        self.game_turn = 1
 
         self._game_memory.add_turn_to_memory("", initial_scene)
         return initial_scene
@@ -70,10 +71,15 @@ Now describe the first scene in the game, as the player would see it, and then t
                 {
                     "role": "assistant",
                     "content": f"You create the next scene in the adventure according to player's last action.\
-                        the conxtext of the game is:\n {self._context}\n\
+                        the context of the game is:\n {self._context}\n\
                         The suggested synopsis, or what should happen during the game is:\n {self._synopsis}\n\
                         the previous turns in the game were:\n {self._game_memory.get_memory()}\n\
-                        Remember to stay in character output only text describing the game situation to the player."
+                        Remember to stay in character output only text describing the game situation to the player.\n\
+                        The suggested length of game is around 40-100 turns and the game get's more difficult as it progresses. \
+                        The current turn is {self.game_turn}.\n\
+                        It is also possible, that the current action kills the player, or the end conditions of the \
+                        game are met. In that case, the end of the output must be marked with 'GAME OVER'.\n\
+                        "
                 },
                 {
                     "role": "user",
@@ -83,6 +89,7 @@ Now describe the first scene in the game, as the player would see it, and then t
         )
 
         self._game_memory.add_turn_to_memory(player_input, output)
+        self.game_turn += 1
         return output
 
     def end_game_report(self) -> str:
@@ -93,9 +100,15 @@ Now describe the first scene in the game, as the player would see it, and then t
             messages=[
                 {
                     "role": "assistant",
-                    "content": "You summarize the game and assess the player's performance in the text adventure\
-                    . Last 10 turns in the game were:\
-                        \n" + self._game_memory.get_memory()
+                    "content": f"""
+You are an end summarizer of an adventure game. Assess the player's performance in the text adventure
+ game, where the suggested synopsis of the adventure was:\n {self._synopsis}
+. Last 10 turns in the game were:
+{self._game_memory.get_memory()}
+
+Give a summary of the adventure and assess the player's performance in the text adventure.
+Assess especially if the player failed or completed the adventure.
+"""
                 }
             ]
         )
