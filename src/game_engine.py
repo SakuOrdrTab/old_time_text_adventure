@@ -2,7 +2,6 @@
 
 from .game_memory import GameMemory
 from .llms.o4mini_LLM import O4miniLLM
-from src.adventures.kalevala import CONTEXT as game_context, SYNOPSIS as game_synopsis
 
 class Game():
 
@@ -117,7 +116,8 @@ Assess especially if the player failed or completed the adventure.
         return response
 
 if __name__ == "__main__":
-    game = Game()
+    from src.adventures.kalevala import CONTEXT, SYNOPSIS
+    game = Game(CONTEXT, SYNOPSIS)
     
     initial_setting = game.start_game()
     print(initial_setting)
