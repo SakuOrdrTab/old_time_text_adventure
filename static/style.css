@@ -6,10 +6,10 @@ body {
     font-family: Arial, sans-serif;
   }
 
-  .select {
+  select {
     padding: 10px;
     background-color: #000000;
-    color: #5f1c1c;
+    color: #d3d3d3; /* light gray text */
     border: 1px solid #d3d3d3;
     box-sizing: border-box;
   }
