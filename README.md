@@ -2,18 +2,18 @@
 
 # A text adventure game in the style of old computer text games
 
-Instead of a parser, natural language is used to interact with the game engine. The motor of the game engine is currently openai's o4-mini, which seems to be capable and costeffective solution. Open source models runnable locally with 16 GB VRAM did not seem to achieve good enough outputs yet. The game engine can handle different types of adventures; the context and hint-level synopsis are passed to the LLM in the prompt and they can be found in the adventures folder. Just replace the `main.py` imports accordingly and you have a couple of alternatives.
+Instead of a parser, natural language is used to interact with the game engine. The motor of the game engine is currently openai's o4-mini, which seems to be capable and costeffective solution. Open source models runnable locally with 16 GB VRAM did not seem to achieve good enough outputs yet. The game engine can handle different types of adventures; the context and hint-level synopsis are passed to the LLM in the prompt and they can be found in the adventures folder. 
 
 O4-mini seems to be quite cheap, I have now tweaked with the game for a coupla days and I have spent only twenty cents.
 
 ## TODO
 
-- End game conditions on right time: .endswith(".END.")
 - Strip occasional "Text Adventure game:"
+- Add short descriptions to adventures and directory browsing
+- Add Authentication and user administration in Mongo
+- Session handling (with Redis?)
 
-- Try local models
-- Make a C64 React frontend
-- Add DallE images to a scene, not cheap however.
+- Try local models and Stable diffusion
 
 ## Agents
 
@@ -39,20 +39,18 @@ Install dependancies:
 In you environment, set you openAI API key to the environment variable `OPENAI_API_KEY`
 You can also do this in the code, if you prefer; the init of the LLM happens in O4miniLLM class, as `chat.completions.create()` is called in the initial scene description.
 
-Now just run the main entry point:
+There are two entry points.
+
+There is the flask webUI, that also incorporates scene visualizations using DALL-E 2. This however is not free. Using o4-mini is really cheap and a game costs only about cent or another to play. However, creating images with DALL-E is more costly, costing about 2 cents an image. This means that playing the game through webUI with images costs maybe 1€ if the game lasts about 50 turns. However, this is the way I intended this game to be, and to run it:
+>py app.py
+
+The main.py is the CLI variant for playing the game. It does not use DALL-E, so it is cheaper
 >py main.py
 
 ## Adventures
-
 
 Different adventures are in the `adventures` folder in each files as constants. Currently there is:
 - kalevala (finnish iron age traditional adventure)
 - zombie_apocalypse (Traditional zombie survival horror in northern Norway)
 - edo_romance (Late samurai period romance)
 - icu_disaster (A medical RPG)
-
-In the `main.py` check this:
-
->from src.adventures.edo_romance import CONTEXT as game_context, SYNOPSIS as game_synopsis
-
-replace the `edo_romance`with desired adventure
