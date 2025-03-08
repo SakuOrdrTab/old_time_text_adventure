@@ -1,5 +1,11 @@
 '''Kalevala adventure'''
 
+SHORT_DESCRIPTION = '''
+Revenge journey in the iron age Finland
+'''
+
+STYLE = "scenic photograph"
+
 CONTEXT = '''
 The context of the adventure game is the iron age Finland, about 1000 BC. People live in the harsh finnish wild, hunting 
 and fishing and usually live quite separately in remote wooden houses enclosing one family. Starvation and misery prevail

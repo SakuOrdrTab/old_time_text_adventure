@@ -1,5 +1,11 @@
 '''Paranoia adventure'''
 
+SHORT_DESCRIPTION = '''
+Adventure in the style of 80's RPG Paranoia
+'''
+
+STYLE = "cartoon"
+
 CONTEXT = '''
 The adventure is set in Alpha Complex, a vast underground city controlled by The Computer, a totalitarian artificial intelligence obsessed with maintaining order, security, and happiness. The world outside Alpha Complex is a radioactive wasteland (probably), and The Computer protects its citizens from this grim fate by ensuring their absolute loyalty.
 The society of Alpha Complex is structured around mandatory happiness, rigid hierarchy, and rampant paranoia. Every citizen is assigned a security clearance based on the color spectrum (Infrared is the lowest, followed by Red, Orange, Yellow, Green, Blue, Indigo, Violet, and finally, Ultra-Violet, which is reserved for High Programmers). Viewing or touching objects above your security clearance is treason.

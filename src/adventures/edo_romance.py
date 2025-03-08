@@ -1,5 +1,11 @@
 '''Edo romance adventure'''
 
+SHORT_DESCRIPTION = '''
+A romantic adventure in Edo period Japan
+'''
+
+STYLE = "japanese wood painting"
+
 CONTEXT = '''
 The adventure takes place in Edo-period Japan (17th–19th century), a time of honor, duty, and strict societal divisions. The nation is at peace under the rule of the Tokugawa Shogunate, but this peace is fragile—clan rivalries, political intrigues, and personal struggles still shape lives.
 The player is a young samurai, recently returned to their hometown after years of training under a master swordsman. However, the adventure is not about war or glory, but about matters of the heart—a journey of love, duty, and choices that will shape the player’s fate.

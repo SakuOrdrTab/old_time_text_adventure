@@ -1,5 +1,11 @@
 '''Narvik Nocturne nightmare'''
 
+SHORT_DESCRIPTION = '''
+Zombie nightmare in northern Norway
+'''
+
+STYLE = "watercolour painting"
+
 CONTEXT = '''
 The adventure takes place in Narvik, a town in Northern Norway, in the aftermath of a sudden and unexplained zombie outbreak. Most of the population has been turned into the infected—hostile, reanimated corpses driven by an unnatural hunger. The remaining survivors have abandoned law and order, forming small groups or living in isolation, each struggling to stay alive in the ruins of civilization.
 The infection is not fully understood. Some of the infected are slow and mindless, while others are faster and more aggressive. Some even appear to retain fragments of memory or intelligence, making them unpredictable. The infection is known to spread through bites, but there may be other unknown vectors.

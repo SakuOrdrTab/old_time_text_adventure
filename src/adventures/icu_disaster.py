@@ -1,5 +1,9 @@
 '''ICU disaster'''
 
+SHORT_DESCRIPTION = "Problems at a university hospital intensive care unit"
+
+STYLE = "cartoon"
+
 CONTEXT = '''
 The adventure takes place in the Intensive Care Unit (ICU) of a large university hospital, a high-pressure environment where the critically ill are treated and every second counts. The ICU is equipped with state-of-the-art monitoring systems, ventilators, and life-support machines, but even the best technology is useless without the right diagnosis and decisions.
 The player is an anesthesiologist, a highly trained specialist in critical care, pain management, and emergency interventions. The player is responsible for managing a particularly difficult patient whose condition is rapidly deteriorating.

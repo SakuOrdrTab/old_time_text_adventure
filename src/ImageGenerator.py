@@ -10,7 +10,7 @@ class ImageGenerator():
     def get_image(self, original_prompt: str):
         try:
             if len(original_prompt) >= 900:
-                summarize_prompt = f"Summarize and shorten this description to fewer than 900 characters: {original_prompt}"
+                summarize_prompt = f"Create a DALL-E prompt describing this scene: {original_prompt}.\nThe prompt must be less than 900 characters long!"
                 summary_response = self.image_client.chat.completions.create(
                     model="gpt-4o-mini",
                     messages=[{"role": "user", "content": summarize_prompt}],
