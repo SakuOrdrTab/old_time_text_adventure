@@ -8,7 +8,12 @@
   <body>
     <div class="container">
         <h1>End Game Report</h1>
-        <pre>{{ report }}</pre>
+        <div>
+          <img src="{{ image }}" alt="Scene Image" style="max-width:100%; height:auto;">
+        </div>
+        <div>
+          {{ report }}
+        </div>
         <p><a href="{{ url_for('new_game') }}">Start a New Game</a></p>
     </div>
   </body>

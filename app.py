@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
+from openai import OpenAI
 import uuid
 
 # Import your game engine and adventures.
@@ -20,6 +21,31 @@ adventures = [
     "zombie_apocalypse",
 ]
 
+# If images are used, initialize a client
+image_client = OpenAI()
+
+def get_image(original_prompt: str):
+    if len(original_prompt) >= 900:
+        # get 4o-mini to summarize prompt
+        summarize_prompt = f"Summarize and shorten this description to fewer than 900 characters: {original_prompt}"
+        summary_response = image_client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[{"role": "user", "content": summarize_prompt}],
+        )
+        prompt = summary_response.choices[0].message.content
+    else:
+        prompt = original_prompt
+    image_prompt = f"Create a vivid and interesting image depicting this scene: {prompt[:999]}"
+    image_response = image_client.images.generate(
+            model="dall-e-2",
+            prompt=image_prompt,
+            size="512x512",
+            quality="standard",
+            n=1,
+        )
+    return image_response.data[0].url
+    
+
 @app.route('/new_game', methods=['GET', 'POST'])
 def new_game():
     if request.method == 'POST':
@@ -38,7 +64,8 @@ def new_game():
         
         # Start the game and render the initial scene.
         initial_scene = game.start_game()
-        return render_template("next_scene.html", scene=initial_scene, game_id=game_id, game_over=False)
+        image = get_image(initial_scene)
+        return render_template("next_scene.html", scene=initial_scene, game_id=game_id, game_over=False, image=image)
     
     # GET request: render the adventure selector.
     return render_template("new_game.html", adventures=adventures)
@@ -57,11 +84,12 @@ def next_scene():
 
     if game_over:
         report = game.end_game_report()
+        image = get_image(report)
         del game_statuses[game_id]
-        return render_template("end_game.html", report=game.end_game_report())
-        return render_template("end_game.html", report=report)
+        return render_template("end_game.html", report=report, image=image)
     
-    return render_template("next_scene.html", scene=game_output, game_id=game_id, game_over=game_over)
+    image = get_image(game_output)
+    return render_template("next_scene.html", scene=game_output, game_id=game_id, game_over=game_over, image=image)
 
 @app.route('/')
 def index():
