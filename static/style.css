@@ -1,39 +1,45 @@
+/* Import the Press Start 2P font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #9999ff; /* light blue margins */
+  font-family: 'Press Start 2P', monospace;
 }
 
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #333333; /* this will be the color of the margins */
-}
-
-select {
-  padding: 10px;
-  background-color: #000000;
-  color: #d3d3d3; /* light gray text */
-  border: 1px solid #d3d3d3;
-  box-sizing: border-box;
 }
 
 .container {
   width: 80%;
   height: 80%;
-  background-color: #000000;
-  color: #d3d3d3;
+  background-color: #0000aa; /* deep blue container */
+  color: #9999ff;          /* light blue text */
   padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Style for select elements */
+select {
+  padding: 10px;
+  background-color: #0000aa;
+  color: #9999ff;
+  border: 1px solid #9999ff;
+  margin: 5px;
   box-sizing: border-box;
 }
 
 /* Style for text inputs */
 input[type="text"] {
-  width: 100%; /* Takes the full width of the container */
-  background-color: #000000; /* black background */
-  color: #ffffff; /* white text */
-  border: 1px solid #d3d3d3;
+  width: 100%;
+  background-color: #0000aa;
+  color: #9999ff;
+  border: 1px solid #9999ff;
   padding: 10px;
   box-sizing: border-box;
 }
@@ -41,19 +47,23 @@ input[type="text"] {
 /* Style for buttons */
 button {
   padding: 10px 20px;
-  background-color: #000000;
-  color: #ffffff;
-  border: 1px solid #d3d3d3;
+  background-color: #0000aa;
+  color: #9999ff;
+  border: 1px solid #9999ff;
   cursor: pointer;
+  font-family: 'Press Start 2P', monospace;
+  padding: 10px;
+  margin: 10px;
 }
 
 button:hover {
-  background-color: #444444;
+  background-color: #000099; /* Slightly darker on hover */
 }
 
 /* Ensure text wraps nicely within the container */
 pre {
   white-space: pre-wrap;
   word-wrap: break-word;
+  color: #9999ff;
+  font-family: 'Press Start 2P', monospace;
 }
-  

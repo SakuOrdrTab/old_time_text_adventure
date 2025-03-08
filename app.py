@@ -5,6 +5,7 @@ import uuid
 # Import your game engine and adventures.
 from src.game_engine import Game
 from src.helper_funcs import load_adventure
+from src.ImageGenerator import ImageGenerator
 
 app = Flask(__name__)
 app.secret_key = "your_secret_key_here" # Implement later for sessions
@@ -20,31 +21,8 @@ adventures = [
     "edo_romance",
     "zombie_apocalypse",
 ]
-
-# If images are used, initialize a client
-image_client = OpenAI()
-
-def get_image(original_prompt: str):
-    if len(original_prompt) >= 900:
-        # get 4o-mini to summarize prompt
-        summarize_prompt = f"Summarize and shorten this description to fewer than 900 characters: {original_prompt}"
-        summary_response = image_client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[{"role": "user", "content": summarize_prompt}],
-        )
-        prompt = summary_response.choices[0].message.content
-    else:
-        prompt = original_prompt
-    image_prompt = f"Create a vivid and interesting image depicting this scene: {prompt[:999]}"
-    image_response = image_client.images.generate(
-            model="dall-e-2",
-            prompt=image_prompt,
-            size="512x512",
-            quality="standard",
-            n=1,
-        )
-    return image_response.data[0].url
-    
+  
+image_generator = ImageGenerator()
 
 @app.route('/new_game', methods=['GET', 'POST'])
 def new_game():
@@ -64,7 +42,7 @@ def new_game():
         
         # Start the game and render the initial scene.
         initial_scene = game.start_game()
-        image = get_image(initial_scene)
+        image = image_generator.get_image(initial_scene)
         return render_template("next_scene.html", scene=initial_scene, game_id=game_id, game_over=False, image=image)
     
     # GET request: render the adventure selector.
@@ -84,11 +62,11 @@ def next_scene():
 
     if game_over:
         report = game.end_game_report()
-        image = get_image(report)
+        image = image_generator.get_image(report)
         del game_statuses[game_id]
         return render_template("end_game.html", report=report, image=image)
     
-    image = get_image(game_output)
+    image = image_generator.get_image(game_output)
     return render_template("next_scene.html", scene=game_output, game_id=game_id, game_over=game_over, image=image)
 
 @app.route('/')

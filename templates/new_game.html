@@ -7,20 +7,39 @@
   </head>
   <body>
     <div class="container">
-        <h1>Old Style Text Adventure game</h1>
-        Welcome to an old style text adventure game. Input your actions in the first person
-        in natural language, for example:<br>
-        <i>"I wonder if there are any clues? I will search the ruins for any clues of perpetrators."</i><br>
-        <br>
-        <h2>Choose an Adventure</h2>
-        <form action="{{ url_for('new_game') }}" method="post">
-            <label for="adventure">Choose an adventure:</label><br>
-              {% for name in adventures %}
-                <input type="radio" name="adventure" id="{{ name }}" value="{{ name }}">
-                <label for="{{ name }}">{{ name.replace('_',' ').title() }}</label><br>
-              {% endfor %}          
-            <button type="submit">Start Game</button>
-        </form>
+      <div>
+        <pre>
+          <H2>
+
+            
+      **** COMMODORE 64 BASIC V2 ****
+
+  32000000K RAM SYSTEM  31999966911 BASIC BYTES FREE
+
+READY.
+LOAD "ADVENTURE",8,1
+
+SEARCHING FOR ADVENTURE
+LOADING
+READY.
+RUN
+          </H2>
+        </pre>
+      </div>
+      <h1>Old Style Text Adventure game</h1>
+      Welcome to an old style text adventure game. Input your actions in the first person
+      in natural language, for example:<br>
+      <i>"I wonder if there are any clues? I will search the ruins for any clues of perpetrators."</i><br>
+      <br>
+      <h2>Choose an Adventure</h2>
+      <form action="{{ url_for('new_game') }}" method="post">
+          <label for="adventure">Choose an adventure:</label><br>
+            {% for name in adventures %}
+              <input type="radio" name="adventure" id="{{ name }}" value="{{ name }}">
+              <label for="{{ name }}">{{ name.replace('_',' ').title() }}</label><br>
+            {% endfor %}          
+          <button type="submit">Start Game</button>
+      </form>
     </div>
   </body>
 </html>
