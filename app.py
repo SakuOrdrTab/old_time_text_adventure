@@ -33,7 +33,8 @@ def new_game():
             return "Invalid adventure selected", 400
         
         # Initialize the game engine for the selected adventure.
-        game_context, game_synopsis = load_adventure(adventure_name)
+        game_context, game_synopsis, short_desc, style = load_adventure(adventure_name)
+        image_generator.set_style(style)
         game = Game(game_context=game_context, game_synopsis=game_synopsis)
         
         # Create a unique game session ID.

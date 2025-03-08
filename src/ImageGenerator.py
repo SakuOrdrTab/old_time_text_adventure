@@ -6,6 +6,10 @@ class ImageGenerator():
      
     def __init__(self):
           self.image_client = OpenAI()
+          self.style = ""
+
+    def set_style(self, style : str) -> None:
+        self.style = style
 
     def get_image(self, original_prompt: str):
         try:
@@ -19,7 +23,7 @@ class ImageGenerator():
             else:
                 prompt = original_prompt
 
-            image_prompt = f"Create a vivid and interesting image depicting this scene: {prompt[:920]}"
+            image_prompt = f"Create a vivid and interesting image depicting this scene in the style of {self.style}: {prompt[:900]}"
             print(f"image prompt: {image_prompt}")
             image_response = self.image_client.images.generate(
                 model="dall-e-2",
