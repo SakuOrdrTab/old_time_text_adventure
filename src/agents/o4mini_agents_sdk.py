@@ -17,6 +17,7 @@ client = OpenAI()
 
 scene_generator_agent = Agent(
     name="Scene Generator Agent",
+    model="o4-mini",
     instructions=f'''
 You are a text game engine that provides rich and vivid adventure story and a scene description, 
 to what the player then reacts to.
@@ -28,6 +29,7 @@ Always return the actual description of the scene, not the meta information.
 
 scene_verificator_agent = Agent(
     name="Scene Verificator Agent",
+    model="o4-mini",
     instructions='''You receive a text adventure game scene description and provide feedback if it'
 conforms to the predefined context of the game. Also, you check that the scene description follows
 the general synopsis of the game and the story going onwards in a steady text adventure game style.
@@ -39,6 +41,7 @@ improve the scene description. If the scene is OK, return 'Scene OK'.
 
 game_engine_agent = Agent(
     name="Game Engine Agent",
+    model="o4-mini",
     instructions='''
 You are a text game engine that provides rich and vivid adventure story and a scene description, 
 to what the player reacts. 
