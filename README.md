@@ -21,7 +21,7 @@ My original intention was to use multiagent generation with LangChain. However, 
 
 Anyhow, if you want to see how my agent with two tools (text generator and assesser) work, you can run:
 
->python -m src.agents.o4mini_agent
+>python -m src.agents.<agent>
 
 This works from the project root folder, otherwise the module imports get screwed.
 
