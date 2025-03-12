@@ -4,7 +4,7 @@ from langchain_openai import ChatOpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 
-class O4miniAgent():
+class O4miniLangChainAgent():
 
     def __init__(self, context : str, synopsis : str, memory, logger = None):
         
@@ -149,7 +149,7 @@ if __name__ == "__main__":
 
     from src.game_memory import GameMemory
     game_memory = GameMemory()
-    agent = O4miniAgent(context=context, synopsis=synopsis, memory=game_memory)
+    agent = O4miniLangChainAgent(context=context, synopsis=synopsis, memory=game_memory)
     while True:
         user_input = input("\nPlayer Action (or 'quit' to exit): ")
         if user_input.lower() in ["quit", "exit"]:
