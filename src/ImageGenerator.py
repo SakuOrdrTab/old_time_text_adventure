@@ -1,17 +1,20 @@
-''' Image generator for the adventure game'''
+''' Image generator for the adventure game. Currently uses openAI Dall-E 2, which is EXPENSIVE!'''
 
 from openai import OpenAI
 
 class ImageGenerator():
      
     def __init__(self):
+          '''Needs open ai API key currently'''
           self.image_client = OpenAI()
           self.style = ""
 
     def set_style(self, style : str) -> None:
+        '''Imports style from adventure py file'''
         self.style = style
 
     def get_image(self, original_prompt: str):
+        '''Creates an Dall-E image from scene. Image prompt has a hard limit of 1000 tokens.'''
         try:
             if len(original_prompt) >= 900:
                 summarize_prompt = f"Create a DALL-E prompt describing this scene: {original_prompt}.\nThe prompt must be less than 900 characters long!"

@@ -1,3 +1,6 @@
+''' Game memory. Currently just a list of last 10 turns. 
+TODO: needs a concise whole game summary. See LangChain Memories, they are WIP.
+'''
 from collections import deque
 
 class GameMemory():

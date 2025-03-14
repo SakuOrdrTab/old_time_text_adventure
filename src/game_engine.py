@@ -87,6 +87,7 @@ Now describe the first scene in the game, as the player would see it, and then t
             ]
         )
 
+        # Last 10 turns are in memory and passed to prompts
         self._game_memory.add_turn_to_memory(player_input, output)
         self.game_turn += 1
         return output
@@ -95,6 +96,7 @@ Now describe the first scene in the game, as the player would see it, and then t
         """End the game and summarize what happened."""
         response = ""
         response += ("\n==== GAME OVER ====\n")
+        # TODO: game end report needs prompt refinement.
         assessment = self._client.chat_completions_create(
             messages=[
                 {

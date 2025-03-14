@@ -7,12 +7,25 @@ from langchain.chains import LLMChain
 class O4miniLangChainAgent():
 
     def __init__(self, context : str, synopsis : str, memory, logger = None):
+        """LangChain framework agent. Currently using still openAI, WIP to use open source
+        models
+
+        Args:
+            context (str): context of the adventure
+            synopsis (str): suggested synopsis of the adventure
+            memory (_type_): memory of past interactions
+            logger (_type_, optional): Not currently implemented. Defaults to None.
+
+        Raises:
+            ValueError: If openAI API key is missing
+        """        
         
         # Initialize LLM o4 mini
         OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
         if not OPENAI_API_KEY:
             raise ValueError("Please set your OPENAI_API_KEY environment variable.")
 
+        # Use chat for agent behaviour
         self.llm = ChatOpenAI(
             model_name="gpt-4o-mini",  # or "gpt-4", "gpt-3.5-turbo", etc.
             openai_api_key=OPENAI_API_KEY,

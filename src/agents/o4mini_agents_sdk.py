@@ -8,8 +8,21 @@ import asyncio
 
 
 class O4miniAgentsSDK():
+    '''O4 mini using the openai agents SDK'''
 
     def __init__(self, context : str, synopsis : str, memory, logger=None):
+        """O4 mini agent with two subagents
+
+        Args:
+            context (str): the context of the game
+            synopsis (str): the suggested synopsis of the story
+            memory (_type_): The memory needs to be passed
+            logger (_type_, optional): If you want to use a logger, currently not implemented. Defaults to None.
+
+        Raises:
+            ValueError: If no OPEN AI api key
+
+        """        
         self.context = context
         self.synopsis = synopsis
         self.memory = memory
@@ -19,11 +32,13 @@ class O4miniAgentsSDK():
         if not OPENAI_API_KEY:
             raise ValueError("Please set your OPENAI_API_KEY environment variable.")
 
+        # Use chatCompletions for agent interaction for now
         self.model=OpenAIChatCompletionsModel( 
             model="gpt-4o-mini",
             openai_client=AsyncOpenAI()
         )
 
+        # Creates the scene text
         self.scene_generator_agent = Agent(
             name="Scene Generator Agent",
             model=self.model,
@@ -36,6 +51,8 @@ class O4miniAgentsSDK():
         ''',
         )
 
+        # Verifies scene to specs
+        # TODO: health, progress of story
         self.scene_verificator_agent = Agent(
             name="Scene Verificator Agent",
             model=self.model,
@@ -47,6 +64,7 @@ class O4miniAgentsSDK():
         ''',
         )
 
+        # The orchestrator agent
         self.game_engine_agent = Agent(
             name="Game Engine Agent",
             model=self.model,
